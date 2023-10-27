@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { CocktailsModule } from './cocktails/cocktails.module';
 import { IngredientsModule } from './ingredients/ingredients.module';
+import { GintonicComponent } from './gintonic/gintonic.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GintonicComponent
   ],
   imports: [
     BrowserModule,

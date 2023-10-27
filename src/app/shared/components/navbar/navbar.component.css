@@ -1,0 +1,18 @@
+.search-input {
+  padding-left: 25px;
+  background-image: url("../../../../assets/images/navbar/search.png");
+  background-size: 15px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  text-indent: 10px;
+}
+
+input::placeholder {
+  text-indent: 15px;
+}
+
+.filled {
+  background-image: none;
+}
+
+

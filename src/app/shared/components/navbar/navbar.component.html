@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light mt-5">
     <div class="container-fluid">
-        <a class="nav-link active" aria-current="page" href="#"><img class="img-fluid" src="assets/general/Logo.png" alt="Logo"></a>
+        <a class="nav-link active" aria-current="page" href="#"><img class="img-fluid" src="assets/images/navbar/logo.png" alt="Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,8 +17,14 @@
               </li>
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input 
+                class="form-control me-2 rounded-pill search-input" 
+                type="search" 
+                placeholder="Search" 
+                aria-label="Search"
+                (input)="onInputChange($event)" 
+                [ngClass]="{ 'filled': isFilled }"
+              >
             </form>
         </div>
     </div>
