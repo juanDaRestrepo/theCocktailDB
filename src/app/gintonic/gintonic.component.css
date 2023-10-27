@@ -1,0 +1,57 @@
+.h1 {
+    font-size: 3.5rem;
+}
+
+.h2 {
+    font-size: 3.5rem;
+}
+
+.h6 {
+    line-height: 1;
+    margin: 0px;
+}
+
+.btn {
+    line-height: 1;
+}
+
+.bg-green-soft {
+    background-color: #a1dbc3;
+}
+
+.bg-link-img {
+    background-image: url(../../assets/images/gintonic/gintonic-bottle.png);
+}
+
+.bg-green-dark {
+    background-color: #5ca3a7;
+}
+
+.btn-try-now {
+    box-shadow: 5px 5px 10px #95bebf;
+}
+
+.gintonic-section-text-color {
+    color: #574747;
+}
+
+.gin-description {
+    line-height: 1;
+}
+
+.gin-circle {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30%;
+    border-radius: 50%; 
+}
+
+.gin-tonic-bg-images {
+    background-image: 
+        url(../../assets/images/gintonic/gintonic-bottle.png),
+        url(../../assets/images/gintonic/gintonic-bg-brown-tree.png),
+        url(../../assets/images/gintonic/gintonic-bg-pear.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, bottom 0px right 0px, bottom 21px left 0px;
+    background-size: 33%, 31%, 25%;
+}
