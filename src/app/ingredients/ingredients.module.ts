@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryComponent } from './components/category/category.component';
-import { IngredientComponent } from './components/ingredient/ingredient.component';
-
-
+import { IngredientCategoryComponent } from './components/category/ingredient-category.component';
 
 @NgModule({
   declarations: [
-    CategoryComponent,
-    IngredientComponent
+    IngredientCategoryComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-  
+    IngredientCategoryComponent
   ]
 })
 export class IngredientsModule { }

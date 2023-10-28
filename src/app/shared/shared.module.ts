@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { CocktailsModule } from '../cocktails/cocktails.module';
+import { IngredientsModule } from '../ingredients/ingredients.module';
 
 @NgModule({
   declarations: [
     HomePageComponent,
     NavbarComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CocktailsModule,
+    IngredientsModule
   ],
   exports: [
     HomePageComponent,

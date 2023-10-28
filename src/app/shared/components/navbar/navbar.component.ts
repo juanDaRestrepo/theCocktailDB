@@ -11,20 +11,17 @@ import { IngredientsService } from 'src/app/ingredients/services/ingridients.ser
 })
 export class NavbarComponent {
 
-  public cocktail: Cocktail[] = [];
-  public ingredient: Ingredient[] = [];
-
-  constructor( private cocktailsService: CocktailsService, private ingredientService: IngredientsService ) {}
+  constructor( private cocktailsService: CocktailsService, private ingredientsService: IngredientsService ) {}
 
   searchByCocktailOrIngredient( term: string ) {
     this.cocktailsService.searchCocktailByName(term)
       .subscribe( cocktail => {
-        this.cocktail = cocktail;
+        this.cocktailsService.setCocktailData(cocktail);
       });
     
-    this.ingredientService.searchIngredientByName(term)
-      .subscribe( ingredient => {
-        this.ingredient = ingredient;
+    this.ingredientsService.searchIngredientByName(term)
+      .subscribe( ingredients => {
+        this.ingredientsService.setIngredientData(ingredients);
       })
   }
 }
