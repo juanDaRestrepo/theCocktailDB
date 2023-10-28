@@ -16,16 +16,9 @@
                   <a class="nav-link active" aria-current="page" href="#">Blog</a>
               </li>
             </ul>
-            <form class="d-flex">
-              <input 
-                class="form-control me-2 rounded-pill search-input shadow" 
-                type="search" 
-                placeholder="Search" 
-                aria-label="Search"
-                (input)="onInputChange($event)" 
-                [ngClass]="{ 'filled': isFilled }"
-              >
-            </form>
+            <shared-search-box
+              (onValue)="searchByCocktailOrIngredient($event)"
+            ></shared-search-box>
         </div>
     </div>
 </nav>

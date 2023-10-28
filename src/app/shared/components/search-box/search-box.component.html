@@ -1,0 +1,10 @@
+<input
+  class="form-control me-2 rounded-pill search-input shadow"
+  type="search"
+  placeholder="Search"
+  aria-label="Search"
+  (input)="onInputChange($event)"
+  [ngClass]="{ filled: isFilled }"
+  (keyup.enter)="emitValue(txtInput.value)"
+  #txtInput
+/>
