@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { CocktailsModule } from './cocktails/cocktails.module';
 import { IngredientsModule } from './ingredients/ingredients.module';
 import { GintonicComponent } from './gintonic/gintonic.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { GintonicComponent } from './gintonic/gintonic.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     SharedModule,
     CocktailsModule,
     IngredientsModule

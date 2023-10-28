@@ -12,6 +12,9 @@ import { IngredientComponent } from './components/ingredient/ingredient.componen
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+  
   ]
 })
 export class IngredientsModule { }
