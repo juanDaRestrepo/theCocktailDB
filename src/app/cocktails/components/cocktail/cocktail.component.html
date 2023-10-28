@@ -1,1 +1,13 @@
-<p>cocktail works!</p>
+<div class="drink-img-container" [ngClass]="isFirstDrink ? 'cocktail-section-title' : ''">
+    <img src="{{image}}" alt="{{name}}" class="{{borderColor}}">
+</div>
+<div>
+    <div class="fw-bold text-white">
+        {{name}}
+    </div>
+</div>
+<div>
+    <div class="text-white">
+        Show ingredients
+    </div>
+</div>

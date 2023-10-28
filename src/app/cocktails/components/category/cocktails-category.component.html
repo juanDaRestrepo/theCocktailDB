@@ -1,5 +1,14 @@
-<section class="row">
-    <div class="col-12 col-md-6 col-lg-4" *ngFor="let drink of drinks">
-        {{drink.strDrink}}
+<section class="d-flex justify-content-center section-cocktails-container w-75">
+    <div class="row w-75 cocktails-container rounded">
+        <div class="col-12 col-md-6 col-lg-4" *ngFor="let drink of drinks.slice(0, 8); let i = index">
+            <app-cocktail
+                [name]="drink.strDrink" 
+                [image]="drink.strDrinkThumb"
+                [borderColor]="getBorderColor(i)"
+                [isFirstDrink]="i === 0"
+                class="d-flex flex-column justify-content-center align-items-center mb-5"
+            ></app-cocktail>
+        </div>
     </div>
 </section>
+

@@ -1,0 +1,10 @@
+.section-cocktails-container {
+  background-color: #475852;
+  border-radius: 74% 7% 7% 7% / 21% 7% 7% 7%;
+  margin-top: 10rem;
+}
+
+.cocktails-container {
+  position: relative;
+  bottom: 30px;
+}

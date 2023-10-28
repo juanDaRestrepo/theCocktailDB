@@ -16,6 +16,8 @@ export class CocktailsCategoryComponent implements OnInit {
 
   public cocktails: Cocktail = { drinks: [] };
   public drinks: Drinks[] = [];
+
+  public classBorderColorsArray = ['border-color-pink', 'border-color-green', 'border-color-skin'];
   public cocktailCategories = {
     popular : "popular",
     latest : "latest",
@@ -34,6 +36,7 @@ export class CocktailsCategoryComponent implements OnInit {
               this.cocktails = response[0];
               this.drinks = response.flatMap(cocktail => cocktail.drinks);
             } else {
+              console.log(response)
               this.cocktails = response;
               this.drinks = response.drinks;
             }
@@ -65,5 +68,9 @@ export class CocktailsCategoryComponent implements OnInit {
       break;
   
     }    
+  }
+
+  getBorderColor(index: number) {
+    return this.classBorderColorsArray[index % this.classBorderColorsArray.length];
   }
 }

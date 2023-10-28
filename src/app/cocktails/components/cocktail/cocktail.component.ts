@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cocktail',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cocktail.component.css']
 })
 export class CocktailComponent {
+  @Input() name: string = "";
+  @Input() image: string = "";
+  @Input() borderColor: string = "";
+  @Input() isFirstDrink: boolean = false;
 
 }
