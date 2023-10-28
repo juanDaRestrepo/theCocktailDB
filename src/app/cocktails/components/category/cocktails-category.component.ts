@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CocktailsService } from '../../services/cocktails.service';
-import { Cocktail } from '../../interfaces/cocktail';
+import { Cocktail, Drinks } from '../../interfaces/cocktail';
 
 @Component({
   selector: 'cocktails-category',
@@ -9,27 +9,61 @@ import { Cocktail } from '../../interfaces/cocktail';
 })
 export class CocktailsCategoryComponent implements OnInit {
 
-  public popularCocktailsCategory: Cocktail[] = [];
-  public latestCocktailsCategory: Cocktail[] = [];
 
+
+  @Input() 
+  getCategory: string = "";
+
+  public cocktails: Cocktail = { drinks: [] };
+  public drinks: Drinks[] = [];
+  public cocktailCategories = {
+    popular : "popular",
+    latest : "latest",
+    random : "random"
+  };
+  
   constructor(private cocktailsService: CocktailsService) { }
 
 
   ngOnInit(): void {
-    this.cocktailsService.searchCocktailByCategory("popular.php")
-      .subscribe(cocktails => {
-        this.popularCocktailsCategory = cocktails;
-      });
-
-    this.cocktailsService.searchCocktailByCategory("latest.php")
-      .subscribe(cocktails => {
-        this.latestCocktailsCategory = cocktails;
-      });
-
-    this.cocktailsService.searchCocktailByCategory("randomselection.php")
-      .subscribe(cocktails => {
-        this.latestCocktailsCategory = cocktails;
-      });
-    
+    switch (this.getCategory){
+      case this.cocktailCategories.popular : 
+        this.cocktailsService.searchCocktailByCategory("popular.php")
+          .subscribe((response: Cocktail | Cocktail[]) => {
+            if (Array.isArray(response)) {
+              this.cocktails = response[0];
+              this.drinks = response.flatMap(cocktail => cocktail.drinks);
+            } else {
+              this.cocktails = response;
+              this.drinks = response.drinks;
+            }
+        });
+      break;
+      case  this.cocktailCategories.latest : 
+        this.cocktailsService.searchCocktailByCategory("latest.php")
+        .subscribe((response: Cocktail | Cocktail[]) => {
+          if (Array.isArray(response)) {
+            this.cocktails = response[0];
+            this.drinks = response.flatMap(cocktail => cocktail.drinks);
+          } else {
+            this.cocktails = response;
+            this.drinks = response.drinks;
+          }
+        });
+      break;
+      case this.cocktailCategories.random : 
+        this.cocktailsService.searchCocktailByCategory("randomselection.php")
+        .subscribe((response: Cocktail | Cocktail[]) => {
+          if (Array.isArray(response)) {
+            this.cocktails = response[0];
+            this.drinks = response.flatMap(cocktail => cocktail.drinks);
+          } else {
+            this.cocktails = response;
+            this.drinks = response.drinks;
+          }
+        });
+      break;
+  
+    }    
   }
 }
