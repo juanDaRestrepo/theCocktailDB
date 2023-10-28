@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryComponent } from './category/category.component';
-import { IngredientComponent } from './ingredient/ingredient.component';
+import { CategoryComponent } from './components/category/category.component';
+import { IngredientComponent } from './components/ingredient/ingredient.component';
 
 
 
