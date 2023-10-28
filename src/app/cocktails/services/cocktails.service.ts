@@ -8,7 +8,7 @@ export class CocktailsService {
 
     private cocktailData: Subject<Cocktail[]> = new Subject<Cocktail[]>();
 
-    private apiUrl: string = "https://www.thecocktaildb.com/api/json/v1/1"
+    private apiUrl: string = "https://www.thecocktaildb.com/api/json/v2/9973533/"
 
     constructor(private http: HttpClient) { }
 
@@ -25,7 +25,7 @@ export class CocktailsService {
     }
 
     searchCocktailByCategory(term: string): Observable<Cocktail[]> {
-        return this.http.get<Cocktail[]>(`${this.apiUrl}/list.php?c=${term}`);
+        return this.http.get<Cocktail[]>(`${this.apiUrl}/${term}`);
     }
 
 }

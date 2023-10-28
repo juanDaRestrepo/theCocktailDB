@@ -7,18 +7,29 @@ import { Cocktail } from '../../interfaces/cocktail';
   templateUrl: './cocktails-category.component.html',
   styleUrls: ['./cocktails-category.component.css']
 })
-export class CocktailsCategoryComponent implements OnInit{
+export class CocktailsCategoryComponent implements OnInit {
 
-  public latestCocktailCategory: Cocktail[] = []; 
+  public popularCocktailsCategory: Cocktail[] = [];
+  public latestCocktailsCategory: Cocktail[] = [];
 
-  constructor( private cocktailsService: CocktailsService) {}
+  constructor(private cocktailsService: CocktailsService) { }
 
-  
+
   ngOnInit(): void {
-    this.cocktailsService.searchCocktailByCategory("list")
+    this.cocktailsService.searchCocktailByCategory("popular.php")
       .subscribe(cocktails => {
-        console.log(cocktails)
-        this.latestCocktailCategory = cocktails;
+        this.popularCocktailsCategory = cocktails;
       });
+
+    this.cocktailsService.searchCocktailByCategory("latest.php")
+      .subscribe(cocktails => {
+        this.latestCocktailsCategory = cocktails;
+      });
+
+    this.cocktailsService.searchCocktailByCategory("randomselection.php")
+      .subscribe(cocktails => {
+        this.latestCocktailsCategory = cocktails;
+      });
+    
   }
 }
