@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { CocktailsService } from '../../../cocktails/services/cocktails.service';
-import { Cocktail } from 'src/app/cocktails/interfaces/cocktail';
-import { Ingredient } from 'src/app/ingredients/interfaces/Ingredient';
 import { IngredientsService } from 'src/app/ingredients/services/ingridients.service';
 
 @Component({

@@ -24,4 +24,8 @@ export class CocktailsService {
         return this.http.get<Cocktail[]>(`${this.apiUrl}/search.php?s=${term}`);
     }
 
+    searchCocktailByCategory(term: string): Observable<Cocktail[]> {
+        return this.http.get<Cocktail[]>(`${this.apiUrl}/list.php?c=${term}`);
+    }
+
 }
