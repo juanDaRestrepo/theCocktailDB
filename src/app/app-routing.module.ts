@@ -9,6 +9,10 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
+    path: 'cocktail',
+    loadChildren: () => import('./cocktails/cocktails.module').then( m => m.CocktailsModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }
