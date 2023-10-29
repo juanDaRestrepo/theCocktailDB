@@ -6,5 +6,6 @@
   (input)="onInputChange($event)"
   [ngClass]="{ filled: isFilled }"
   (keyup.enter)="emitValue(txtInput.value)"
+  (keypress)="onKeyPress($event)"
   #txtInput
 />

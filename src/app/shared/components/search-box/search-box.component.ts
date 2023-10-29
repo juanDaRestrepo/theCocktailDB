@@ -20,5 +20,19 @@ export class SearchBoxComponent {
     console.log(value);
     this.onValue.emit( value );
   }
+
+  onKeyPress(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.scrollToPoint();
+    }
+  }
+
+  scrollToPoint() {
+    const element = document.getElementById('popular');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
 }
 

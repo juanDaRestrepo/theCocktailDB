@@ -14,11 +14,13 @@ export class NavbarComponent {
   searchByCocktailOrIngredient( term: string ) {
     this.cocktailsService.searchCocktailByName(term)
       .subscribe( cocktail => {
+        console.log(cocktail)
         this.cocktailsService.setCocktailData(cocktail);
       });
     
     this.ingredientsService.searchIngredientByName(term)
       .subscribe( ingredients => {
+        console.log(ingredients)
         this.ingredientsService.setIngredientData(ingredients);
       })
   }

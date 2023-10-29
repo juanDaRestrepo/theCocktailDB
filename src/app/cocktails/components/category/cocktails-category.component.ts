@@ -47,6 +47,11 @@ export class CocktailsCategoryComponent implements OnInit {
           });
         break;
     }
+
+    this.cocktailsService.getCocktailData()
+      .subscribe((response: Cocktail) => {
+        this.drinks = response.drinks;
+      });
   }
 
   getBorderColor(index: number) {

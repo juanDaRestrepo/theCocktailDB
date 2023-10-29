@@ -36,7 +36,6 @@ export class IngredientCategoryComponent {
   getBgColor(index: number) {
     const colorsArrayLength = this.classBgColorsArray.length;
     const newIndex = index % colorsArrayLength;
-    console.log(this.classBgColorsArray[newIndex]);
     return this.classBgColorsArray[newIndex];
   }
 }
