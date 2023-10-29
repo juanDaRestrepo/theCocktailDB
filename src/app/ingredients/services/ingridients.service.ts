@@ -7,7 +7,6 @@ import { Ingredient, IngredientsList } from 'src/app/ingredients/interfaces/Ingr
 export class IngredientsService {
 
     private ingredientData: Subject<Ingredient[]> = new Subject<Ingredient[]>();
-    private ingredientList: Subject<IngredientsList> = new Subject<IngredientsList>();
 
     private apiUrl: string = "https://www.thecocktaildb.com/api/json/v2/9973533/"
 

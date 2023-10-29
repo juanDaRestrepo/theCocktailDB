@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Drinks, Ingredient, Ingredients, IngredientsList } from '../../interfaces/Ingredient';
+import { Drinks, Ingredient, IngredientsList } from '../../interfaces/Ingredient';
 import { IngredientsService } from '../../services/ingridients.service';
 
 @Component({
@@ -13,7 +13,6 @@ export class IngredientCategoryComponent {
   getCategory: string = "";
 
   public ingridients: Drinks[] = [];
-  public ingridientsInfo: Ingredient[] = [];
   public classBgColorsArray = ['bg-pink', 'bg-green', 'bg-skin'];
   public categories = {
     random: "random",
@@ -31,7 +30,6 @@ export class IngredientCategoryComponent {
         } else {
           this.ingridients = response.drinks.slice(6, 13);
         }
-        console.log(this.ingridients)
       });
   }
 
