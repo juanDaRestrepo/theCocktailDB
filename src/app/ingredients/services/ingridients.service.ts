@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { Ingredient, IngredientsList } from 'src/app/ingredients/interfaces/Ingredient';
@@ -7,6 +7,7 @@ import { Ingredient, IngredientsList } from 'src/app/ingredients/interfaces/Ingr
 export class IngredientsService {
 
   private ingredientData: Subject<Ingredient[]> = new Subject<Ingredient[]>();
+  sendIngredientName: EventEmitter<string> = new EventEmitter<string>();
 
   private apiUrl: string = "https://www.thecocktaildb.com/api/json/v2/9973533/"
 
@@ -29,11 +30,15 @@ export class IngredientsService {
   getIngredients(): Observable<IngredientsList> {
     return this.http.get<IngredientsList>(`${this.apiUrl}/list.php?i=list`);
   }
-
+  
   public getBgColor(index: number) {
     const colorsArrayLength = this.classBgColorsArray.length;
     const newIndex = index % colorsArrayLength;
     return this.classBgColorsArray[newIndex];
+  }
+
+  emitIngredientName(name: string) {
+    this.sendIngredientName.emit(name);
   }
 
 }

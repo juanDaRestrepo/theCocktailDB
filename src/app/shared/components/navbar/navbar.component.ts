@@ -14,7 +14,6 @@ export class NavbarComponent {
   searchByCocktailOrIngredient( term: string ) {
     this.cocktailsService.searchCocktailByName(term)
       .subscribe( cocktail => {
-        console.log(cocktail)
         this.cocktailsService.setCocktailData(cocktail);
       });
     

@@ -5,6 +5,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { CocktailsModule } from '../cocktails/cocktails.module';
 import { IngredientsModule } from '../ingredients/ingredients.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { IngredientsModule } from '../ingredients/ingredients.module';
   imports: [
     CommonModule,
     CocktailsModule,
-    IngredientsModule
+    IngredientsModule,
+    FormsModule
   ],
   exports: [
     HomePageComponent,

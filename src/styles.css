@@ -1,18 +1,24 @@
 body {
-    background-color: #f0eae5;
-    color: #574747;
+  background-color: #f0eae5;
+  color: #574747;
 }
 
 .link-text {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .bg-pink {
-    background-color: #dfbdd8;
+  background-color: #dfbdd8;
 }
 .bg-green {
-    background-color: #c5dba2;
+  background-color: #c5dba2;
 }
 .bg-skin {
-    background-color: #dbb5a1;
+  background-color: #dbb5a1;
+}
+
+.link-styles {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
