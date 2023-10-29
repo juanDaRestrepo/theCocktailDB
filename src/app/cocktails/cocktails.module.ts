@@ -6,6 +6,7 @@ import { CocktailsRoutingModule } from './cocktails-routing.module';
 import { CocktailsCategoryComponent } from './components/category/cocktails-category.component';
 import { CocktailComponent } from './components/cocktail/cocktail.component';
 import { CategoryToDrinksPipe } from '../pipes/category-to-drinks.pipe';
+import { IngredientsModule } from '../ingredients/ingredients.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CategoryToDrinksPipe } from '../pipes/category-to-drinks.pipe';
   ],
   imports: [
     CommonModule,
-    CocktailsRoutingModule
+    CocktailsRoutingModule,
+    IngredientsModule
   ],
   exports: [
     CocktailsCategoryComponent

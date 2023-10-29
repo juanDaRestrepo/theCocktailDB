@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Drinks, Ingredient, IngredientsList } from '../../interfaces/Ingredient';
+import { Drinks, IngredientsList } from '../../interfaces/Ingredient';
 import { IngredientsService } from '../../services/ingridients.service';
 
 @Component({
@@ -13,14 +13,13 @@ export class IngredientCategoryComponent {
   getCategory: string = "";
 
   public ingridients: Drinks[] = [];
-  public classBgColorsArray = ['bg-pink', 'bg-green', 'bg-skin'];
+  
   public categories = {
     random: "random",
     popular: "popular"
   };
 
-  constructor(private ingredientsService: IngredientsService) { }
-
+  constructor(public ingredientsService: IngredientsService) { }
 
   ngOnInit(): void {
     this.ingredientsService.getIngredients()
@@ -33,9 +32,5 @@ export class IngredientCategoryComponent {
       });
   }
 
-  getBgColor(index: number) {
-    const colorsArrayLength = this.classBgColorsArray.length;
-    const newIndex = index % colorsArrayLength;
-    return this.classBgColorsArray[newIndex];
-  }
+ 
 }

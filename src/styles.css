@@ -6,3 +6,13 @@ body {
 .link-text {
     opacity: 0.5;
 }
+
+.bg-pink {
+    background-color: #dfbdd8;
+}
+.bg-green {
+    background-color: #c5dba2;
+}
+.bg-skin {
+    background-color: #dbb5a1;
+}

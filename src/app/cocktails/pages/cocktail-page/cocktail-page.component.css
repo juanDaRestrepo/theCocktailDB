@@ -9,3 +9,17 @@
 .border-color-green {
     border: 10px solid #c5dba2;
 }
+
+.ingredient-container {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.ingredient-img {
+    height: 120px;
+    width: 120px
+}
+

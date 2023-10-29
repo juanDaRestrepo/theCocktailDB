@@ -1,11 +1,9 @@
-export interface Ingredients {
-    ingredients: Ingredient[];
-}
+
+
 
 export interface Ingredient {
-    strDrink: string
-    strDrinkThumb: string
-    idDrink: string
+    name: string;
+    measure: string | null;
 }
 
 

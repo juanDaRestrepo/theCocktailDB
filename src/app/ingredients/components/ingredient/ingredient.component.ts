@@ -9,4 +9,9 @@ export class IngredientComponent {
   @Input() name: string = "";
   @Input() bgColor: string = "";
   @Input() isThirdIngredient: boolean = false;
+  @Input() includeLinkToRecipes: boolean = true;
+  @Input() imgFileName: string = "";
+  @Input() textNameClass: string = "";
+  @Input() includeMessure: boolean = false;
+  @Input() measure: string | null = "";
 }

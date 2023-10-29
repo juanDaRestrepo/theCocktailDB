@@ -12,7 +12,8 @@ import { IngredientComponent } from './components/ingredient/ingredient.componen
     CommonModule
   ],
   exports: [
-    IngredientCategoryComponent
+    IngredientCategoryComponent,
+    IngredientComponent
   ]
 })
 export class IngredientsModule { }

@@ -20,9 +20,9 @@ export interface Drinks {
     "strInstructionsZH-HANS": any
     "strInstructionsZH-HANT": any
     strDrinkThumb: string
-    strIngredient1: string
-    strIngredient2: string
-    strIngredient3: string
+    strIngredient1?: string
+    strIngredient2?: string
+    strIngredient3?: string
     strIngredient4?: string
     strIngredient5?: string
     strIngredient6?: string
@@ -53,5 +53,6 @@ export interface Drinks {
     strImageSource?: string
     strImageAttribution?: string
     strCreativeCommonsConfirmed: string
-    dateModified: string
+    dateModified: string;
+    [key: string ]: string | undefined;
 }
