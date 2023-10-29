@@ -11,8 +11,7 @@ export class CocktailsCategoryComponent implements OnInit {
 
 
 
-  @Input() 
-  getCategory: string = "";
+  @Input() category: string = "";
 
   public cocktails: Cocktail = { drinks: [] };
   public drinks: Drinks[] = [];
@@ -28,7 +27,7 @@ export class CocktailsCategoryComponent implements OnInit {
 
 
   ngOnInit(): void {
-    switch (this.getCategory){
+    switch (this.category){
       case this.cocktailCategories.popular : 
         this.cocktailsService.searchCocktailByCategory("popular.php")
           .subscribe((response: Cocktail | Cocktail[]) => {
@@ -72,5 +71,9 @@ export class CocktailsCategoryComponent implements OnInit {
 
   getBorderColor(index: number) {
     return this.classBorderColorsArray[index % this.classBorderColorsArray.length];
+  }
+
+  getCategory(): string {
+    return this.category;
   }
 }

@@ -7,10 +7,12 @@ import { SharedModule } from './shared/shared.module';
 import { GintonicComponent } from './gintonic/gintonic.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    GintonicComponent
+    GintonicComponent,
   ],
   imports: [
     BrowserModule,

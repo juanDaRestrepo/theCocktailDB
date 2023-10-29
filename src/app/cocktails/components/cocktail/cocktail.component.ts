@@ -10,5 +10,6 @@ export class CocktailComponent {
   @Input() image: string = "";
   @Input() borderColor: string = "";
   @Input() isFirstDrink: boolean = false;
+  @Input() category: string = "";
 
 }

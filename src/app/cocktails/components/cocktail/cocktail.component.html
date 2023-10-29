@@ -1,4 +1,4 @@
-<div class="drink-img-container" [ngClass]="isFirstDrink ? 'cocktail-section-title' : ''">
+<div class="drink-img-container" [ngClass]="isFirstDrink ? 'cocktail-section-title' : ''"  [attr.data-title]="category | categoryToDrinks">
     <img src="{{image}}" alt="{{name}}" class="{{borderColor}}">
 </div>
 <div>
@@ -6,8 +6,11 @@
         {{name}}
     </div>
 </div>
-<div>
-    <div class="text-white">
-        Show ingredients
+<div class="d-flex">
+    <div class="text-white link-text">
+        Show details
+    </div>
+    <div class="ms-2">
+        <img src="assets/images/cocktails/go-icon.png" alt="go-icon" width="10" height="10">
     </div>
 </div>

@@ -24,7 +24,7 @@
 }
 
 .cocktail-section-title::after {
-  content: "Popular Drinks";
+  content: attr(data-title);
   position: absolute;
   top: -9%;
   font-size: 22px;

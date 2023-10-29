@@ -2,3 +2,7 @@ body {
     background-color: #f0eae5;
     color: #574747;
 }
+
+.link-text {
+    opacity: 0.5;
+}

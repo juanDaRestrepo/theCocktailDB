@@ -5,6 +5,7 @@ import { CocktailPageComponent } from './pages/cocktail-page/cocktail-page.compo
 import { CocktailsRoutingModule } from './cocktails-routing.module';
 import { CocktailsCategoryComponent } from './components/category/cocktails-category.component';
 import { CocktailComponent } from './components/cocktail/cocktail.component';
+import { CategoryToDrinksPipe } from '../pipes/category-to-drinks.pipe';
 
 
 
@@ -12,7 +13,8 @@ import { CocktailComponent } from './components/cocktail/cocktail.component';
   declarations: [
     CocktailsCategoryComponent,
     CocktailPageComponent,
-    CocktailComponent
+    CocktailComponent,
+    CategoryToDrinksPipe,
   ],
   imports: [
     CommonModule,
