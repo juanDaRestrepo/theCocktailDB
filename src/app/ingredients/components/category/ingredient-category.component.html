@@ -1,1 +1,12 @@
-<p>ingredient category works!</p>
+<section class="d-flex justify-content-center section-ingredients-container w-75">
+    <div class="row w-75 ingredients-container rounded">
+        <div class="col-12 col-md-6 col-lg-4" *ngFor="let ingridient of ingridients; let i = index">
+            <app-ingredient
+                [bgColor]="getBgColor(i)"
+                [isThirdIngredient]="i === 2"
+                [name]="ingridient.strIngredient1"
+                class="d-flex flex-column justify-content-center align-items-center mb-5"
+            ></app-ingredient>
+        </div>
+    </div>
+</section>

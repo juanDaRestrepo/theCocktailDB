@@ -1,1 +1,13 @@
-<p>ingredient works!</p>
+<div class="ingredient-container" [ngClass]="isThirdIngredient ? 'ingredient-section-title' : ''" class="{{bgColor}}">
+    <img src="assets/images/ingredients/{{name}}.png" alt="{{name}}" class="py-2 ingredient-img">
+</div>
+<div>
+    <div class="fw-bold text-white">
+        {{name}}
+    </div>
+</div>
+<div>
+    <div class="text-white">
+        Show cocktails
+    </div>
+</div>

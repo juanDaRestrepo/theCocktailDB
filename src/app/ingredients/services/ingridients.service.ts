@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
-import { Ingredient } from 'src/app/ingredients/interfaces/Ingredient';
+import { Ingredient, IngredientsList } from 'src/app/ingredients/interfaces/Ingredient';
 
 @Injectable({providedIn: 'root'})
 export class IngredientsService {
 
     private ingredientData: Subject<Ingredient[]> = new Subject<Ingredient[]>();
+    private ingredientList: Subject<IngredientsList> = new Subject<IngredientsList>();
 
-    private apiUrl: string = "https://www.thecocktaildb.com/api/json/v1/1"
+    private apiUrl: string = "https://www.thecocktaildb.com/api/json/v2/9973533/"
 
     constructor(private http: HttpClient) {}
     
@@ -23,5 +24,9 @@ export class IngredientsService {
     searchIngredientByName( term: string ): Observable<Ingredient[]> {
         return this.http.get<Ingredient[]>(`${ this.apiUrl }/search.php?i=${term}`);
     }
+
+    getIngredients(): Observable<IngredientsList> {
+      return this.http.get<IngredientsList>(`${ this.apiUrl }/list.php?i=list`);
+  }
     
 }

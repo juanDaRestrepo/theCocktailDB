@@ -1,0 +1,31 @@
+.bg-pink {
+    background-color: #dfbdd8;
+}
+.bg-green {
+    background-color: #c5dba2;
+}
+.bg-skin {
+    background-color: #dbb5a1;
+}
+
+.ingredient-container {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.ingredient-img {
+    height: 120px;
+    width: 120px
+}
+
+.ingredient-section-title::after {
+    content: "Popular Ingredients";
+    position: absolute;
+    top: -15%;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 1;
+  }

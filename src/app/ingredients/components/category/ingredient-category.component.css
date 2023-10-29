@@ -1,0 +1,10 @@
+.section-ingredients-container {
+  background-color: #574747;
+  border-radius: 74% 7% 7% 7% / 21% 7% 7% 7%;
+  margin-top: 10rem;
+}
+
+.ingredients-container {
+  position: relative;
+  bottom: 30px;
+}

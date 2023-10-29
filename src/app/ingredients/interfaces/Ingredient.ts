@@ -1,12 +1,18 @@
-export interface Welcome {
+export interface Ingredients {
     ingredients: Ingredient[];
 }
 
 export interface Ingredient {
-    idIngredient:   string;
-    strIngredient:  string;
-    strDescription: string;
-    strType:        string;
-    strAlcohol:     string;
-    strABV:         string;
+    strDrink: string
+    strDrinkThumb: string
+    idDrink: string
+}
+
+
+export interface IngredientsList {
+    drinks: Drinks[]
+}
+
+export interface Drinks {
+    strIngredient1: string
 }
