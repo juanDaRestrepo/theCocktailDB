@@ -31,3 +31,8 @@
   font-weight: bold;
   z-index: 1;
 }
+
+.link-styles {
+  text-decoration: none;
+  color: inherit;
+}

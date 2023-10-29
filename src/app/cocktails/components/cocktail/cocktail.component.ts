@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cocktail.component.css']
 })
 export class CocktailComponent {
+  @Input() id: string = "";
   @Input() name: string = "";
   @Input() image: string = "";
   @Input() borderColor: string = "";
