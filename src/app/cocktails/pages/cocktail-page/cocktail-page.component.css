@@ -1,0 +1,11 @@
+
+.drink-img-container img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border-radius: 50%;
+}
+
+.border-color-green {
+    border: 10px solid #c5dba2;
+}
