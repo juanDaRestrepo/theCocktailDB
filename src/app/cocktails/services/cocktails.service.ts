@@ -28,4 +28,8 @@ export class CocktailsService {
         return this.http.get<Cocktail>(`${this.apiUrl}/${term}`);
     }
 
+    searchCocktailById(id: number): Observable<Cocktail> {
+        return this.http.get<Cocktail>(`${this.apiUrl}/lookup.php?i=${id}`);
+    }
+
 }

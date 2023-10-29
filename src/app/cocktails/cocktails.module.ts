@@ -8,7 +8,6 @@ import { CocktailComponent } from './components/cocktail/cocktail.component';
 import { CategoryToDrinksPipe } from '../pipes/category-to-drinks.pipe';
 
 
-
 @NgModule({
   declarations: [
     CocktailsCategoryComponent,
